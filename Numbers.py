@@ -24,23 +24,16 @@ def __millerRabin(n):
         else:
             return False
 
-
-    
-
     return True
 
 def __isMillerPass(n):
 
     #number of trials
-    k=1
+    k=20
     for i in range(k):
         if not __millerRabin(n):
             return False
     return True
-
-
-
-
 
 def genPrime():
     
@@ -57,10 +50,14 @@ def genPrime():
         if rand_num % 2 == 0:
             continue
 
+        notprime = False
         #low primality test
         for i in PRIMES:
             if rand_num % i == 0:
-                continue
+                notprime = True
+                break
+        if notprime:
+            continue
         
         #high primality rabin miller test
         if not __isMillerPass(rand_num):
@@ -70,4 +67,4 @@ def genPrime():
 
     return rand_num
 
-
+print(genPrime())
