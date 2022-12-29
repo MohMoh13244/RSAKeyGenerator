@@ -67,4 +67,3 @@ def genPrime():
 
     return rand_num
 
-print(genPrime())
