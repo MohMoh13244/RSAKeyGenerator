@@ -6,8 +6,6 @@ from secrets import randbits
 import math
 from sys import getsizeof
 
-bone = "Hello"
-
 ## padding construct 0x00 || 0x02 || R || 0x00 || m = Mcap
 # R is a randomly generated number nonzero number atleast 8 bytes long
 # the length of Mcap in bytes must be equal to the length of n in bytes || Mcap = len(n)
