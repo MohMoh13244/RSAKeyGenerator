@@ -129,9 +129,14 @@ def genkeys():
     # In order to calculate d the extended euclidean algorithm is used
 
     d = __extendedEuclid(e,n)
-    print('Public Key:',e,'\n\nPrivate key:',d)
-    print(e*d %n)
+   
+    return e,d,n
 
+## This method will take the message text as an input
+# it will return the public, private key and the modulus
+# def RSA(message):
+#     public_key,private_key,n = genkeys()
+    
+#     message = math.pow(message,public_key)
 
-## Below this line will run the key Generator
-genkeys()
+#     return public_key, private_key, n, message
