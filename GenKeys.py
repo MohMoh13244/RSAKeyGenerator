@@ -132,11 +132,10 @@ def genkeys():
    
     return e,d,n
 
-## This method will take the message text as an input
-# it will return the public, private key and the modulus
-# def RSA(message):
-#     public_key,private_key,n = genkeys()
-    
-#     message = math.pow(message,public_key)
+pub,priv,n = genkeys()
+print(pub,"\n")
+print(priv,"\n")
+print(n,"\n")
 
-#     return public_key, private_key, n, message
+message = 6543612
+print(pow(message,pub,n)) # encr = message ^ public % n
